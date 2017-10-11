@@ -55,6 +55,10 @@ This dataset contains 8732 labeled sound excerpts (<=4s) of urban sounds from 10
 A mirror of all 126,900 sounds on Freesound less than 4 seconds long, as of April 4, 2017. Metadata for all sounds is stored in the json.zip files, and the high quality mp3s are stored in the mp3.zip files.
 https://archive.org/details/freesound4s
 
+### Sensors
+ - Sensel Morph: https://sensel.com/collections/all-products
+  - Over 20,000 pressure sensors 5g - 5kg sensing range of 32,000 levels per-touch.
+
 ### References
 
  - [1] aqibsaeed. Urban-Sound-Classification. https://github.com/aqibsaeed/Urban-Sound-Classification
@@ -73,3 +77,5 @@ yrevar. Imagine classes and labels. https://gist.github.com/yrevar/942d3a0ac09ec
  - Realtime fft audio visualization with python. https://www.swharden.com/wp/2013-05-09-realtime-fft-audio-visualization-with-python/ 
  - Class to record audio continuously 
  - ConvNet.js. http://cs.stanford.edu/people/karpathy/convnetjs/
+ - Sensory Percussion: http://sunhou.se/sensorypercussion.html
+  - Sensory Percussion uses a combination of sensors to directly capture the vibrations of your entire drum. It is designed to isolate your drum from ambient noise so you can use it on stage and in loud environments. Though it uses multiple sensors, it operates like a traditional phantom-powered mono microphone and uses standard XLR connectors.
