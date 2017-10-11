@@ -56,20 +56,20 @@ A mirror of all 126,900 sounds on Freesound less than 4 seconds long, as of Apri
 https://archive.org/details/freesound4s
 
 ### References
-[1] aqibsaeed. Urban-Sound-Classification. https://github.com/aqibsaeed/Urban-Sound-Classification
-[2] Nguyen et al.. Plug & Play Generative Networks. http://www.evolvingai.org/ppgn. Github: https://github.com/Evolving-AI-Lab/ppgn
-[3] Jonah Nordberg. Google deep dream zoom. https://www.youtube.com/watch?v=dbQh1I_uvjo 
 
-Kyle McDonald. AudioNotebooks. https://github.com/kylemcdonald/AudioNotebooks
-Manny Tan & Kyle McDonald. Bird Sounds: Thousands of bird sounds visualized using machine learning. https://experiments.withgoogle.com/ai/bird-sounds
-Installing PyTorch on the NVIDIA Jetson TX1/TX2. https://github.com/andrewadare/jetson-tx2-pytorch
-Deep reinforcement learning - NVIDIA Jetson TX2. https://github.com/dusty-nv/jetson-reinforcement
-Owens et al.. Visually Indicated Sounds. http://vis.csail.mit.edu/
+ - [1] aqibsaeed. Urban-Sound-Classification. https://github.com/aqibsaeed/Urban-Sound-Classification
+ - [2] Nguyen et al.. Plug & Play Generative Networks. http://www.evolvingai.org/ppgn. Github: https://github.com/Evolving-AI-Lab/ppgn
+ - [3] Jonah Nordberg. Google deep dream zoom. https://www.youtube.com/watch?v=dbQh1I_uvjo 
+ - Kyle McDonald. AudioNotebooks. https://github.com/kylemcdonald/AudioNotebooks
+ - Manny Tan & Kyle McDonald. Bird Sounds: Thousands of bird sounds visualized using machine learning. https://experiments.withgoogle.com/ai/bird-sounds
+ - Installing PyTorch on the NVIDIA Jetson TX1/TX2. https://github.com/andrewadare/jetson-tx2-pytorch
+ - Deep reinforcement learning - NVIDIA Jetson TX2. https://github.com/dusty-nv/jetson-reinforcement
+ - Owens et al.. Visually Indicated Sounds. http://vis.csail.mit.edu/
 yrevar. Imagine classes and labels. https://gist.github.com/yrevar/942d3a0ac09ec9e5eb3a
-Recurrent Neural Networks. https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/recurrent_neural_networks.html
-Mario Klingemann. Controlling PPGN hyperparameters in real time with MIDI controller. https://twitter.com/quasimondo/status/807607666478608385 
-Realtime audio visualization in python. https://www.swharden.com/wp/2016-07-19-realtime-audio-visualization-in-python/ 
-•	Python script to continuously record audio from a microphone and dumps out an image (20)fps, taking about 100 ms to record audio
-Realtime fft audio visualization with python. https://www.swharden.com/wp/2013-05-09-realtime-fft-audio-visualization-with-python/ 
-•	Class to record audio continuously 
-ConvNet.js. http://cs.stanford.edu/people/karpathy/convnetjs/
+ - Recurrent Neural Networks. https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/recurrent_neural_networks.html
+ - Mario Klingemann. Controlling PPGN hyperparameters in real time with MIDI controller. https://twitter.com/quasimondo/status/807607666478608385 
+ - Realtime audio visualization in python. https://www.swharden.com/wp/2016-07-19-realtime-audio-visualization-in-python/ 
+ - Python script to continuously record audio from a microphone and dumps out an image (20)fps, taking about 100 ms to record audio
+ - Realtime fft audio visualization with python. https://www.swharden.com/wp/2013-05-09-realtime-fft-audio-visualization-with-python/ 
+ - Class to record audio continuously 
+ - ConvNet.js. http://cs.stanford.edu/people/karpathy/convnetjs/
