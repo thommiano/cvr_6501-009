@@ -2,6 +2,7 @@
 /saved_models
 /audio
 .ipynb_checkpoints
+__pycache__
 
 # Compiled source #
 ###################
