@@ -1,13 +1,13 @@
 import numpy as np
 import torch
-from deepdream.util import showtensor
+from deepdream.util import showtensor, streamtensor
 import scipy.ndimage as nd
 from torch.autograd import Variable
 
 def objective_L2(dst, guide_features):
     return dst.data
 
-def make_step(X, model, **kwargs):
+def make_step(X, model,use_gpu=True,stream_out=False, **kwargs):
     #     X = X.copy()
 
     mean = np.array([0.485, 0.456, 0.406]).reshape([3, 1, 1])
@@ -27,7 +27,9 @@ def make_step(X, model, **kwargs):
 
         model.zero_grad()
         X_tensor = torch.Tensor(X)
-        X_Variable = Variable(X_tensor.cuda(), requires_grad=True)
+        
+        if use_gpu: X_Variable = Variable(X_tensor.cuda(), requires_grad=True)
+        else: X_Variable = Variable(X_tensor.cpu(), requires_grad=True)
 
         act_value = model.forward(X_Variable, end_layer)
         diff_out = object(act_value, guide_features)
@@ -41,13 +43,14 @@ def make_step(X, model, **kwargs):
         X[0, :, :, :] = np.clip(X[0, :, :, :], -mean / std, (1. - mean) / std)
 
         if t == 0 or (t + 1) % show_every == 0:
-            showtensor(X)
+            if stream_out: streamtensor(X)
+            else: showtensor(X)
 
     return X
 
 
 def dream(model, base_img, octave_n=4, octave_scale=1.4,
-              end='', **step_params):
+              end='', use_gpu=True,stream_out=False, **step_params):
     mean = np.array([0.485, 0.456, 0.406]).reshape([3, 1, 1])
     std = np.array([0.229, 0.224, 0.225]).reshape([3, 1, 1])
     octaves = [base_img]
@@ -62,6 +65,6 @@ def dream(model, base_img, octave_n=4, octave_scale=1.4,
             detail = nd.zoom(detail, (1, 1, 1.0 * h / h1, 1.0 * w / w1), order=1)
 
         input_oct = octave_base + detail
-        print(input_oct.shape)
-        out = make_step(input_oct, model, **step_params)
+        #print(input_oct.shape)
+        out = make_step(input_oct, model, **step_params,use_gpu=use_gpu,stream_out=stream_out)
         detail = out - octave_base
