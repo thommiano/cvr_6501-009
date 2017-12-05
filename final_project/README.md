@@ -1,4 +1,4 @@
-# Interactive audio-visual hallucinations
+# Sound-To-Image: Interactive Audio-Visual Hallucinations
 Members: Thom Miano
 
 ### Overview
