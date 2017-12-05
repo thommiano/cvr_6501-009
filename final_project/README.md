@@ -3,33 +3,11 @@ Members: Thom Miano
 
 ### Overview
 
-Input: (Live) Audio data
-Output: Generative visualization corresponding to input
-
-I will train models that generate classification probability vectors of audio inputs. I will take the output of these models and run them through a “selection” function, which could be something like a classifier or something simple like choosing the greatest P probabilities. The output of this selection function is the input to a Generative Adversarial Network (GAN) that outputs a visualization.
+Convolutional Neural Networks (CNNs) are widely used for machine learning tasks involving digital images. When digital images are sampled, light intensity is captured at some range along the electromagnetic spectrum, with mul- tiple ranges (i.e., ”channels”) possibly being captured. CNNs are effective at finding patterns in images as they re- lated to some outcome of interest (e.g., the identification of an object) without explicit indication from humans through manual feature engineering. Digital audio is a representa- tion of waveforms in discrete samples, where each sample value has some amplitude and the frequency of the sound is defined by the number of samples that fall within a cy- cle. CNNs have been used on audio far less frequently than they have been used on images. The goal of this project is to build a real-time environmental sound classifier that can be plugged into a visualization generator for real-time visu- alizations of predicted sounds. The visualization generator could take on many forms, and in this paper we investigate generating spectrograms as well as fixed class images that have Deep Dream applied.
 
 ![diagram.png](./manuscript/figures/output_example_music.png)
 
-Image sources, left to right:
-1. http://www.metroparent.com/daily/family-fun/family-activities/teaching-kids-whistle/ 2. https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_6/recurrent.jpg 3. https://arxiv.org/pdf/1511.06434.pdf 4. http://www.evolvingai.org/ppgn
-
-### More detailed description
-
-<u>Part 1: Sound prediction probabilities </u>
-
-Train a recurrent neural network on a dataset of sounds, which includes things like bird songs, dog barks, and industrial noises. The output of a trained model will be a probability vector of some input sound. I am not experienced with RNNs, so I will need feedback from the instructor(s) on appropriate ways to approach this. One thought I’ve had is to incorporate convolutional layers by first converting the sound input to a spectrogram like the following [1]:
-
-![spectrogram.png](./ref/spectrogram.png)
-
-At least one challenge with adding the spectrogram conversion step is that it could be a sufficiently expensive process such that the final output frame rate is slow enough that it appears “choppy” to a viewer. This is something that will need to be evaluated, and it is tied to one of the final metrics — frame rate fidelity.
-
-<u>Part 2: Generative adversarial network</u>
-
-Train a GAN or fine tune a pre-existing GAN (e.g., PPGN[2]) that takes as input a label (e.g., “red shank”, a bird) and outputs an image of that target. Even if a pre-built GAN like PPGN is used, effort will need to be put in to making the output stream to pixels on a screen rather than to a file on disk. Additionally, beyond just having a single image generated on screen, I’d like to have the top probabilities generated simultaneously as a continuous image, somewhat like the deep dream images [3].
-
-<u>Metrics</u>
-
-The final metric still needs to be quantified more fully, but it will be some combination of (1) output resolution and clarity (the latter somewhat subject) and (2) frame rate. For the models specifically, I will consider various metrics referenced in the literature that can be used to produce more accurate outputs.   
+# Catalogue of references
 
 ### Libraries
 
