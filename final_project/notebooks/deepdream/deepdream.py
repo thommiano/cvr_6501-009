@@ -43,8 +43,10 @@ def make_step(X, model,use_gpu=True,stream_out=False, **kwargs):
         X[0, :, :, :] = np.clip(X[0, :, :, :], -mean / std, (1. - mean) / std)
 
         if t == 0 or (t + 1) % show_every == 0:
-            if stream_out: streamtensor(X)
-            else: showtensor(X)
+            if stream_out: 
+                streamtensor(X)
+            else:
+                showtensor(X)
 
     return X
 
