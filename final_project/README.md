@@ -8,7 +8,7 @@ Output: Generative visualization corresponding to input
 
 I will train models that generate classification probability vectors of audio inputs. I will take the output of these models and run them through a “selection” function, which could be something like a classifier or something simple like choosing the greatest P probabilities. The output of this selection function is the input to a Generative Adversarial Network (GAN) that outputs a visualization.
 
-![diagram.png](./ref/diagram.png)
+![diagram.png](./manuscript/figures/output_example_music.png)
 
 Image sources, left to right:
 1. http://www.metroparent.com/daily/family-fun/family-activities/teaching-kids-whistle/ 2. https://leonardoaraujosantos.gitbooks.io/artificial-inteligence/content/image_folder_6/recurrent.jpg 3. https://arxiv.org/pdf/1511.06434.pdf 4. http://www.evolvingai.org/ppgn
