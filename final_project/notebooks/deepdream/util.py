@@ -36,8 +36,8 @@ def streamarray(a, fmt='jpeg'):
     d_buffer.close()
 
 def streamtensor(a,clear_out=True):
-    if clear_out: clear_output(wait=True)
-    
+    if clear_out: 
+        clear_output(wait=True)
     mean = np.array([0.485, 0.456, 0.406]).reshape([3, 1, 1])
     std = np.array([0.229, 0.224, 0.225]).reshape([3, 1, 1])
     inp = a[0,:, :, :]
@@ -47,5 +47,4 @@ def streamtensor(a,clear_out=True):
     #arr = streamarray(inp)
     #display(arr)
     streamarray(inp)
-    
     time.sleep(.0001)
